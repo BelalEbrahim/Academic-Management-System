@@ -1,0 +1,35 @@
+﻿@model Student
+@{
+    Layout = null;
+    SelectList deptsl = new SelectList(ViewBag.depts, "DeptId", "DeptName"); 
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <label asp-for="Name"></label><input asp-for="Name"/> <span asp-validation-for="Name"></span> <br/>
+        <label asp-for="Age"></label><input asp-for="Age" /> <span asp-validation-for="Age"></span> <br />
+        <label asp-for="Email"></label><input asp-for="Email" /> <span asp-validation-for="Email"></span><br />
+        <select asp-for="DeptNo" asp-items="deptsl">
+         @* @   @foreach(Department item in ViewBag.depts)
+            {
+                <option value="@item.DeptName"></option>
+            } *@
+        </select>
+        <input type="submit" value="add" />
+    </form>
+    
+</body>
+</html>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

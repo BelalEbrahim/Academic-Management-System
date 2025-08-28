@@ -1,0 +1,20 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    Are you sure you want to delete the student: @Model.Name?
+    <form method="post">
+        <input asp-for="Id" type="hidden" />
+        <input type="submit" value="Delete" />
+    </form>
+    <a asp-action="Index">Go to list</a>
+</body>
+</html>

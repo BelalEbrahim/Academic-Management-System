@@ -1,0 +1,40 @@
+﻿@model DetailsVeiwModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Student</title>
+</head>
+<body>
+    <h2>Edit Student</h2>
+    <form asp-action="Edit" method="post">
+
+        <input type="hidden" asp-for="Student.Id" />
+
+        <div>
+            <label asp-for="Student.Name">Name</label>
+            <input asp-for="Student.Name" class="form-control" /><br />
+        </div>
+
+        <div>
+            <label asp-for="Student.Age">Age</label>
+            <input asp-for="Student.Age" class="form-control" /><br />
+        </div>
+
+        <div>
+            <label asp-for="Student.Department.DeptName">Department</label>
+            <select asp-for="Student.DeptNo" class="form-control" asp-items="@(new SelectList(ViewBag.Departments, "DeptId", "DeptName"))">
+                <option value="">Select Department</option>
+            </select><br />
+        </div>
+
+        <input type="submit" value="Save" class="btn btn-success" />
+        <a href="/student" class="btn btn-primary">Back to List</a>
+    </form>
+</body>
+</html>

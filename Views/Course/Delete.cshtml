@@ -1,0 +1,14 @@
+﻿@model Course
+@{
+}
+
+<h1 class="alert alert-danger">
+    Are you sure you want to delete the course: @Model.CourseName?
+</h1>
+
+<form method="post">
+    <input asp-for="CourseId" type="hidden" />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+</form>
+
+<a asp-action="Index" class="btn btn-primary">Go to List</a>

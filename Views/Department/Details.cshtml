@@ -1,0 +1,16 @@
+﻿@model Department
+
+@{
+    
+}
+
+
+    <h2 class="alert alert-danger">Department Details</h2>
+    <div>
+        <p><strong>DeptId:</strong> @Model.DeptId</p>
+        <p><strong>DeptName:</strong> @Model.DeptName</p>
+        <p><strong>Capacity:</strong> @Model.Capacity</p>
+    </div>
+    <a href="/department/edit/@Model.DeptId" class="btn btn-warning">Edit</a>
+    <a href="/department" class="btn btn-primary">Back to List</a>
+

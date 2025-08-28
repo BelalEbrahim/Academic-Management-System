@@ -1,0 +1,13 @@
+﻿@model Course
+@{
+}
+
+<h2 class="alert alert-danger">Course Details</h2>
+<div>
+    <p><strong>Course ID:</strong> @Model.CourseId</p>
+    <p><strong>Course Name:</strong> @Model.CourseName</p>
+    <p><strong>Duration (Hours):</strong> @Model.DurationInHours</p>
+</div>
+
+<a href="/course/edit/@Model.CourseId" class="btn btn-warning">Edit</a>
+<a href="/course" class="btn btn-primary">Back to List</a>

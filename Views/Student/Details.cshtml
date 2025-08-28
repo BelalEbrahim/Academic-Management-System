@@ -1,0 +1,36 @@
+﻿@model DetailsVeiwModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Details</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Student Details</h2>
+
+    <div>
+        <label>Student Name:</label>
+        <span>@Model.Student.Name</span>
+    </div>
+    <div>
+        <label>Age:</label>
+        <span>@Model.Student.Age</span>
+    </div>
+    <div>
+        <label>Department:</label>
+        <span>@Model.Department.DeptName</span>
+    </div>
+    <div>
+        <label>Department Capacity:</label>
+        <span>@Model.Department.Capacity</span>
+    </div>
+
+    <a href="/student" class="btn btn-primary">Back to List</a>
+</body>
+</html>

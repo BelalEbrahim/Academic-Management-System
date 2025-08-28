@@ -1,0 +1,27 @@
+﻿@model Department
+@{
+    
+    ViewBag.Title = "dept Create";
+}
+
+
+    
+
+    <form action="/department/create" method="post">
+        <div class="alert alert-danger" asp-validation-summary="All"></div>
+        <label asp-for="DeptId">Deptid</label><input type="text" name="deptid" /> <span asp-validation-for="DeptId"></span> <br />
+        <label asp-for="DeptName">DeptName</label><input type="text" name="deptname" /> <span asp-validation-for="DeptName"></span> <br />
+        <label asp-for="Capacity">Capacity</label><input type="text" name="capacity" /> <span asp-validation-for="Capacity"></span> <br />
+        <input type="submit" value="add" />
+    </form>
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <a href="~/lib/jquery/dist/jquery.min.map">~/lib/jquery/dist/jquery.min.map</a>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+}
+   
+    

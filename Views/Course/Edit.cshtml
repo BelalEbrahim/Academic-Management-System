@@ -1,0 +1,32 @@
+﻿@model Course
+@{
+    ViewBag.Title = "Course Edit";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Course</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 class="alert alert-danger">Edit Course</h2>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="CourseId" />
+
+        <div>
+            <label asp-for="CourseName">Course Name</label>
+            <input asp-for="CourseName" class="form-control" /><br />
+        </div>
+
+        <div>
+            <label asp-for="DurationInHours">Duration (Hours)</label>
+            <input asp-for="DurationInHours" class="form-control" /><br />
+        </div>
+
+        <input type="submit" value="Save" class="btn btn-success" />
+        <a href="/course" class="btn btn-primary">Back to List</a>
+    </form>
+</body>
+</html>
